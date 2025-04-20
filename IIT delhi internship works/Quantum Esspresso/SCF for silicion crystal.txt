@@ -1,0 +1,43 @@
+&CONTROL
+    calculation = 'scf'               ! SCF calculation for ground state
+    prefix = 'silicon'                 ! Name of the system
+    outdir = './tmp'                   ! Directory for temporary files
+    wf_collect = .true.                ! Write wavefunctions to disk
+    pseudo_dir = './'                  ! Directory for pseudopotential files
+    tstress = .true.                   ! Calculate stress tensor
+    tprnfor = .true.                   ! Calculate forces on atoms
+    etot_conv_thr = 1.0d-9             ! Energy convergence threshold (in Ry)
+    forc_conv_thr = 1.0d-4             ! Force convergence threshold (in Ry/Bohr)
+/
+
+&SYSTEM
+    ibrav = 2                          ! Crystal system (FCC)
+    celldm(1) = 10.26                  ! Lattice constant in Angstrom
+    nat = 2                            ! Number of atoms in the unit cell (Si 2 atoms)
+    ntyp = 1                           ! Number of different atomic species
+    ecutwfc = 12.0                     ! Kinetic energy cutoff for wavefunction in Ry
+    ecutrho = 48.0                     ! Kinetic energy cutoff for charge density in Ry
+    occupations = 'smearing'           ! Occupation function type
+    smearing = 'gaussian'              ! Smearing method
+    degauss = 0.02                     ! Smearing width (in eV)
+    nspin = 1                           ! Spin-unpolarized calculation
+    n k_points = 28                    ! Number of k-points for Brillouin zone sampling
+    atomic_species = 'Si'              ! Atomic species (Si in this case)
+/
+
+&ELECTRONS
+    conv_thr = 1.0d-8                  ! Convergence threshold for the electronic density
+    mixing_beta = 0.7                  ! Mixing factor for density matrix
+    electron_maxstep = 100             ! Max number of SCF iterations
+/
+
+ATOMIC_SPECIES
+Si  28.085  Si.pz-vbc.UPF
+
+ATOMIC_POSITIONS (crystal)
+Si  0.000000  0.000000  0.000000
+Si  0.250000  0.250000  0.250000
+
+K_POINTS (automatic)
+28 28 28 0 0 0
+
