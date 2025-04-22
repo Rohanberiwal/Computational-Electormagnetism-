@@ -1,0 +1,10 @@
+wget https://www.quantum-espresso.org/upf_files/Si.pz-vbc.UPF
+wget https://www.quantum-espresso.org/upf_files/C.pz-rrkjus.UPF
+wget https://www.quantum-espresso.org/upf_files/O.pz-rrkjus.UPF
+wget https://www.quantum-espresso.org/upf_files/H.pz-rrkjus.UPF
+wget https://www.quantum-espresso.org/upf_files/Fe.pz-nd-rrkjus.UPF
+wget https://www.quantum-espresso.org/upf_files/Au.pz-n-rrkjus.UPF
+wget https://www.quantum-espresso.org/upf_files/Al.pz-vbc.UPF
+wget https://www.quantum-espresso.org/upf_files/Cu.pz-d-rrkjus.UPF
+wget https://www.quantum-espresso.org/upf_files/N.pz-rrkjus.UPF
+wget https://www.quantum-espresso.org/upf_files/P.pz-n-rrkjus.UPF
