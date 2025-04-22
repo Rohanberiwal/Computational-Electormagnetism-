@@ -1,0 +1,32 @@
+&CONTROL
+  calculation = 'scf',
+  prefix = 'Au',
+  outdir = './tmp',
+  pseudo_dir = './',
+  tstress = .true.,
+  tprnfor = .true.,
+  verbosity = 'high',
+  wf_collect = .true.,
+/
+&SYSTEM
+  ibrav = 2,
+  celldm(1) = 10.26,
+  nat = 1,
+  ntyp = 1,
+  ecutwfc = 50.0,
+  ecutrho = 600.0,
+  occupations = 'smearing',
+  smearing = 'gaussian',
+  degauss = 0.02,
+/
+&ELECTRONS
+  conv_thr = 1.0d-8,
+  mixing_beta = 0.7,
+  electron_maxstep = 100,
+/
+ATOMIC_SPECIES
+  Au  196.966569  Au.pz-n-rrkjus.UPF
+ATOMIC_POSITIONS (angstrom)
+  Au  0.0 0.0 0.0
+K_POINTS (automatic)
+  1 1 1 0 0 0
